@@ -13,7 +13,7 @@ extends Bench.ForkedTime {
 
   // Queue stack benchmark. Create queue stack and add necessary elements to the queue.
   // Note: Benchmark unavoidably includes overhead of looping through values (but same both classes).
-  performance of "QueueStackDq[Int[" in {
+  performance of "QueueStackDq[Int]" in {
     measure method "enqueue(Int)" in {
       using(unit) in {_ =>
         val q = new QueueStackDq[Int]()
@@ -32,7 +32,7 @@ extends Bench.ForkedTime {
 
   // Queue list benchmark. Create queue stack and add necessary elements to the queue.
   // Note: Benchmark unavoidably includes overhead of looping through values (but same both classes).
-  performance of "QueueList[Int[" in {
+  performance of "QueueList[Int]" in {
     measure method "enqueue(Int)" in {
       using(unit) in {_ =>
         val q = new QueueList[Int]()
